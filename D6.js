@@ -216,23 +216,15 @@ console.log(prova)
 /* ESERCIZIO 11 (map)
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
-let nomi=[]
-function nomifilm(n){
-  for(let i=0;i<n.length;i++){
-    nomi.push(n[i].Title)
-    
-  }
-  return nomi
-}
-prova=nomifilm(movies)
-console.log(prova)
+let nomi=movies.map((n)=> n.Title)
+console.log(nomi)
 /* ESERCIZIO 12 (filter)
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
 
 const filtrato=movies.filter(n=>n.Year>=2000)
 
-prova=nomifilm(movies)
+
 console.log(filtrato)
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
